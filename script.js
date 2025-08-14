@@ -1,32 +1,14 @@
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('.navbar');
+// Navbar toggle
+const menuBar = document.getElementById("menu-bar");
+const navBar = document.querySelector(".navbar");
 
-menu.onclick = () => {
+menuBar.addEventListener("click", () => {
+  navBar.classList.toggle("active");
+});
 
-  menu.classList.toggle('fa-times');
-  navbar.classList.toggle('active');
-
-}
-
-window.onscroll = () => {
-
-  menu.classList.remove('fa-times');
-  navbar.classList.remove('active');
-
-  if (window.scrollY > 60) {
-    document.querySelector('#scroll-top').classList.add('active');
-  } else {
-    document.querySelector('#scroll-top').classList.remove('active');
-  }
-
-}
-
-function loader() {
-  document.querySelector('.loader-container').classList.add('fade-out');
-}
-
-function fadeOut() {
-  setInterval(loader, 3000);
-}
-
-window.onload = fadeOut();
+// Ensure header stays same color on scroll
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.style.background =
+    "linear-gradient(180deg, var(--terra-500), var(--brass-500))";
+});
