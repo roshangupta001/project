@@ -519,15 +519,111 @@
       </section>
     </main>
 
-    <!-- footer section -->
+    <!-- footer section (with location map) -->
     <section class="footer">
-      <div class="share">
-        <a href="#" class="btn">Facebook</a>
-        <a href="#" class="btn">Twitter</a>
-        <a href="#" class="btn">Instagram</a>
-      </div>
+      <div class="footer-inner">
+        <div class="footer-map-wrapper">
+          <div class="map-card">
+            <!-- Map iframe: lazy-loaded and responsive -->
+            <iframe
+              class="map-iframe"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Karma & Kocktails — Location"
+              src="https://www.google.com/maps?q=120+S+Main+St+Unit+50+Grapevine+TX+76051&z=17&output=embed"
+              aria-label="Map showing Karma & Kocktails location, 120 S Main St Unit 50, Grapevine, TX 76051"
+            ></iframe>
+          </div>
 
-      <h1 class="credit">Created by <span>..</span> | All Rights Reserved!</h1>
+          <div class="map-info-card">
+            <div class="map-info-head">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Karma & Kocktails</h3>
+            </div>
+
+            <address class="map-address">
+              120 S Main St<br />
+              Unit 50<br />
+              Grapevine, TX 76051<br />
+              United States
+            </address>
+
+            <p class="map-note">
+              Open daily — come taste the story. Tap below for directions.
+            </p>
+
+            <div class="map-actions">
+              <a
+                class="btn outline"
+                href="https://www.google.com/maps/dir/?api=1&destination=120+S+Main+St+Unit+50+Grapevine+TX+76051"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get directions to Karma & Kocktails (opens Google Maps)"
+                >Get Directions</a
+              >
+              <a
+                class="btn"
+                href="https://www.google.com/maps?q=120+S+Main+St+Unit+50+Grapevine+TX+76051"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open larger map (opens Google Maps)"
+                >Open Map</a
+              >
+            </div>
+          </div>
+          <!-- Modern/social row (replace old .share block) -->
+          <div
+            class="share social-row"
+            aria-label="Karma & Kocktails social links"
+          >
+            <a
+              class="social-btn"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Karma & Kocktails on Facebook"
+              data-title="Facebook"
+            >
+              <span class="icon" aria-hidden="true"
+                ><i class="fab fa-facebook-f"></i
+              ></span>
+              <span class="sr-only">Facebook</span>
+            </a>
+
+            <a
+              class="social-btn"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Karma & Kocktails on Instagram"
+              data-title="Instagram"
+            >
+              <span class="icon" aria-hidden="true"
+                ><i class="fab fa-instagram"></i
+              ></span>
+              <span class="sr-only">Instagram</span>
+            </a>
+
+            <a
+              class="social-btn"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Karma & Kocktails on X (Twitter)"
+              data-title="Twitter"
+            >
+              <span class="icon" aria-hidden="true"
+                ><i class="fab fa-twitter"></i
+              ></span>
+              <span class="sr-only">Twitter</span>
+            </a>
+          </div>
+        </div>
+
+        <h5 class="credit">
+          Created by <span>..</span> | All Rights Reserved!
+        </h5>
+      </div>
     </section>
 
     <!-- scroll top button -->
