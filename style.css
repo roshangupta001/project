@@ -150,10 +150,28 @@ header {
     height: 80px;
 }
 
+header .cgu {
+    background: none !important;
+    /* removes any applied background */
+    mix-blend-mode: multiply;
+    /* blends with header gradient, helps remove white edges */
+    background-color: transparent;
+    /* ensures transparency */
+    display: block;
+    height: 50px;
+    border-radius: 60%;
+    /* adjust based on your header */
+    width: auto;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+
+}
+
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--cream-50);
@@ -161,9 +179,11 @@ header {
     letter-spacing: 0.5px;
 }
 
+
 .logo i {
     color: var(--wood-900);
     font-size: 1.8rem;
+    margin-left: 3 px;
 }
 
 .navbar {
@@ -314,9 +334,10 @@ main {
 }
 
 .speciality {
-  padding: 5rem 5%;
- background: linear-gradient(135deg, rgba(139, 46, 46, .06) 25%, transparent 25%) -20px 0/40px 40px,
-linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -20px 0/40px 40px;}
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, rgba(139, 46, 46, .06) 25%, transparent 25%) -20px 0/40px 40px,
+        linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -20px 0/40px 40px;
+}
 
 
 
@@ -333,13 +354,14 @@ linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -2
 
 .speciality .box {
     position: relative;
-    background: linear-gradient(180deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .9));
-    border: 1px solid rgba(139, 46, 46, .2);
+    background: linear-gradient(180deg, rgba(246, 242, 234, .95), rgba(239, 231, 216, .92));
+    border: 1px solid rgba(90, 31, 27, .15);
+    /* subtle brick border */
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
     transition: all var(--transition-fast);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
 }
 
 .speciality .box::before {
@@ -386,7 +408,7 @@ linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -2
 .speciality .box:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-deep);
-    background: linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(255, 255, 255, .95));
+
 }
 
 .speciality .box:hover::before {
@@ -428,22 +450,26 @@ linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -2
 }
 
 .speciality .box .content h3 {
-    color: var(--brick-800);
+    color: var(--terra-500);
+    /* terracotta heading */
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
+
 .speciality .box .content p {
-    color: var(--muted);
+    color: var(--wood-700);
+    /* deeper brown for body text */
     line-height: 1.7;
 }
 
 /* Popular Section */
 .popular {
     padding: 5rem 5%;
-background: linear-gradient(135deg, rgba(139, 46, 46, .06) 25%, transparent 25%) -20px 0/40px 40px,
-linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -20px 0/40px 40px;}
+    background: linear-gradient(135deg, rgba(139, 46, 46, .06) 25%, transparent 25%) -20px 0/40px 40px,
+        linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -20px 0/40px 40px;
+}
 
 .popular .box {
     position: relative;
@@ -615,43 +641,81 @@ linear-gradient(to bottom left, rgba(139, 46, 46, 0.06) 25%, transparent 25%) -2
 /* Review Section */
 .review {
     padding: 5rem 5%;
-    background: rgba(255, 255, 255, .3);
+    /* use a slightly darker, warm backdrop so light text reads well */
+    background: linear-gradient(180deg, rgba(20, 18, 16, 0.92), rgba(43, 33, 27, 0.94));
 }
 
+/* review cards */
 .review .box {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, .9), rgba(255, 255, 255, .8));
+    /* translucent dark card so cream text is legible over the darker page background */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
     transition: all var(--transition-fast);
+    color: wheat;
+    /* primary text color for good contrast */
 }
 
+/* hover lift */
 .review .box:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-deep);
+    transform: translateY(-6px);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.55);
 }
 
+/* avatar */
 .review .box img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-bottom: 1rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .45);
+    border: 2px solid rgba(255, 255, 255, 0.06);
 }
 
+/* heading + body */
 .review .box h3 {
-    color: var(--brick-800);
+    color: wheat;
     font-size: 1.3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .review .box p {
-    color: var(--muted);
+    color: rgba(246, 242, 234, 0.95);
+    /* off-white for body copy */
     line-height: 1.7;
     font-style: italic;
+    margin: 0;
+    font-size: 1rem;
 }
+
+/* optional metadata (role/date) if present */
+.review .box .meta {
+    display: block;
+    margin-top: 0.75rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+}
+
+/* stars (rating) */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    margin: 0.75rem 0 1.5rem;
+}
+
+.stars i {
+    color: #f4c430;
+    /* keep gold star */
+    font-size: 1.1rem;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
 
 /* Order Section */
 .order {
@@ -740,7 +804,7 @@ textarea {
 }
 
 .footer .credit {
-    color: var(--cream-100);
+    color: wheat;
     font-size: 1rem;
 }
 
@@ -854,16 +918,20 @@ textarea {
 }
 
 @media (max-width: 768px) {
-    .box-container {
-        grid-template-columns: 1fr;
+    .review {
+        padding: 3rem 3%;
     }
 
-    .steps {
-        grid-template-columns: repeat(2, 1fr);
+    .review .box {
+        padding: 1.25rem;
     }
 
-    .gallery .box-container {
-        grid-template-columns: repeat(2, 1fr);
+    .review .box h3 {
+        font-size: 1.1rem;
+    }
+
+    .review .box p {
+        font-size: 0.98rem;
     }
 }
 
