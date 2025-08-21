@@ -1340,6 +1340,11 @@ main {
     position: relative;
     overflow: hidden;
     pointer-events: auto;
+    text-decoration: none;
+}
+
+.category-btn[data-category="menupdf"] {
+    text-decoration: none;
 }
 
 .category-btn::before {
