@@ -16,6 +16,19 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <div id="notice-modal" class="modal-overlay">
+  <div class="modal-content">
+    <h2>NOTICE TO OUR VALUED CUSTOMERS</h2>
+    <p>
+      We would like to inform you that Teatro Bistro and Cocktail Lounge is now under the ownership of Karma &amp; Koctails.<br><br>
+      Please note that we will continue to use the "Teatro" business name for a limited time during this transition period. While the name remains familiar, exciting updates are underway to bring you an enhanced dining and cocktail experience, guided by the vision and values of Karma &amp; Koctails.<br><br>
+      Thank you for your continued support and we look forward to welcoming you under this new chapter.<br><br>
+      Warm regards,<br>
+      Karma &amp; Koctails Management
+    </p>
+    <button id="close-modal-btn" class="btn">Close</button>
+  </div>
+</div>
   </head>
   <body>
     <!-- header section starts -->
@@ -73,88 +86,73 @@
         <div class="box-container">
           <div class="box fade-in">
             <div class="image">
-              <img src="/images/momo.png" alt="Tasty Momos" />
+              <img src="/images/momo.png" alt="Momo 555" />
             </div>
             <div class="content">
-              <img src="/images/s-1.png" alt="Momo Icon" />
-              <h3>Tasty Momo's</h3>
+              <img src="/images/s-1.png" alt="Momo 555" />
+              <h3>Momo 555's</h3>
               <p>
-                Momo is a type of dumpling originally from Tibet which is
-                prominently found in the cuisines of Tibet and Nepal, as well as
-                in the Indian states of Ladakh and Sikkim.
+                Momo 555’s is our Nepali specialty—juicy dumplings bursting with authentic Himalayan flavors and spices.
               </p>
             </div>
           </div>
           <div class="box fade-in">
             <div class="image">
-              <img src="/images/s-img-2.jpg" alt="Darjeeling Thukpa" />
+              <img src="/images/SmokeChicken.jpg" alt="SmokeChicken" />
             </div>
             <div class="content">
-              <img src="/images/s-2.png" alt="Thukpa Icon" />
-              <h3>Darjeeling Thukpa</h3>
+              <img src="/images/s-2.png" alt="SmokeChicken" />
+              <h3>SmokeChicken</h3>
               <p>
-                Thukpa is a Himalayan noodle soup, usually served with meat and
-                is really delicious with lean chicken. It is popular in Tibet,
-                Bhutan, Nepal, and some parts of India.
+                SmokeChicken is a restaurant specialty—tender, smoky chicken bursting with bold, aromatic flavors.
               </p>
             </div>
           </div>
           <div class="box fade-in">
             <div class="image">
-              <img src="/images/laphing.jpg" alt="Spicy Laping" />
+              <img src="/images/Noodel.jpg" alt="Noodels" />
             </div>
             <div class="content">
-              <img src="/images/s-3.png" alt="Laphing Icon" />
-              <h3>Spicy Laping</h3>
+              <img src="/images/s-3.png" alt="Noodels" />
+              <h3>Noodels</h3>
               <p>
-                Laping is a spicy cold mung bean noodle dish in Tibetan cuisine.
-                It is a street food and is also popular in some parts of Nepal.
-                It can be eaten with red pepper chili, coriander and green onion
-                sauce.
+                Noodel is one of our restaurant’s special dishes—savory noodles tossed with fresh veggies and bold flavors.
               </p>
             </div>
           </div>
           <div class="box fade-in">
             <div class="image">
-              <img src="/images/chhyang.jpg" alt="Nepali Chhaang" />
+              <img src="/images/spaghetti plate.jpg" alt="spaghetti plate" />
             </div>
             <div class="content">
-              <img src="/images/s-4.png" alt="Chhyang Icon" />
-              <h3>Nepali Chhaang</h3>
+              <img src="/images/s-4.png" alt="spaghetti plate" />
+              <h3>spaghetti plate</h3>
               <p>
-                It's slightly fizzy, usually comes with a bit of "texture" (that
-                is, floating remnants of rice or grain), and is both sweet and
-                tart in taste.
+                Spaghetti Plate is our special—classic pasta tossed in rich sauce with vibrant, comforting flavors.
               </p>
             </div>
           </div>
           <div class="box fade-in">
             <div class="image">
-              <img src="/images/s-img-5.jpg" alt="Tasty Sweets" />
+              <img src="/images/Gulab Jamun.jpg" alt="Gulab Jamun" />
             </div>
             <div class="content">
-              <img src="/images/s-5.png" alt="Sweets Icon" />
-              <h3>Tasty Sweets</h3>
+              <img src="/images/s-5.png" alt="Gulab Jamun" />
+              <h3>Gulab Jamun</h3>
               <p>
-                A sugar-free, fusion delight will lighten up your festive swag
-                and get you in the mood for the brightest day. Holi is all about
-                thandai, so enjoy whipping up this delicious twist that is
-                sugar-free and guilt-free.
+                Gulab Jamun is our special dessert—soft milk dumplings soaked in fragrant, sweet syrup.
               </p>
             </div>
           </div>
           <div class="box fade-in">
             <div class="image">
-              <img src="/images/s-img-6.jpg" alt="Healthy Breakfast" />
+              <img src="/images/Prown.jpg" alt="Tandoori Prawns" />
             </div>
             <div class="content">
               <img src="/images/s-6.png" alt="Breakfast Icon" />
-              <h3>Healthy Breakfast</h3>
+              <h3>Tandoori Prawns</h3>
               <p>
-                This recipe hails from India and is full of flavours that melt
-                in your mouth in every bite! It is a popular street-style recipe
-                that one can enjoy anytime. Be it for a heavy breakfast or to
-                pair with your cup of evening tea.
+                Tandoori Prawns is our specialty—succulent prawns marinated in spices and grilled for bold flavors.
               </p>
             </div>
           </div>
@@ -183,14 +181,13 @@
             <div class="box fade-in" data-category="food">
               <div class="category-badge">Food</div>
               <img
-                src="/images/pizza.jpg"
-                alt="Delicious Pizza"
+                src="/images/karma's spicy potatoes.jpg"
+                alt="karma's spicy potatoes"
               />
               <div class="content">
-                <h3>Margherita Pizza</h3>
+                <h3>karma's spicy potatoes</h3>
                 <p>
-                  Fresh mozzarella, tomato sauce, and basil on crispy thin
-                  crust. An Italian classic that never disappoints.
+                  Potato cubes stir fried with chowk's special spice blend
                 </p>
                 <a href="#order" class="btn">Order Now</a>
               </div>
@@ -199,14 +196,13 @@
             <div class="box fade-in" data-category="drinks">
               <div class="category-badge drinks">Drinks</div>
               <img
-                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop"
-                alt="Fresh Smoothie"
+                src="/images/Ice Tea.jpg"
+                alt="Ice Tea"
               />
               <div class="content">
-                <h3>Tropical Smoothie</h3>
+                <h3>Ice Tea</h3>
                 <p>
-                  Refreshing blend of mango, pineapple, and coconut. Perfect for
-                  a sunny day.
+                  Ice Tea blended with fruit flavors for a cool, crisp taste.
                 </p>
                 <a href="#order" class="btn">Order Now</a>
               </div>
@@ -215,14 +211,13 @@
             <div class="box fade-in" data-category="food">
               <div class="category-badge">Food</div>
               <img
-                src="/images/chicken biryani.jpg"
-                alt="Chicken Biryani"
+                src="/images/Dyanmite Chicken.jpg"
+                alt="Dyanmite Chicken"
               />
               <div class="content">
-                <h3>Chicken Biryani</h3>
+                <h3>Dyanmite Chicken</h3>
                 <p>
-                  Aromatic basmati rice with tender chicken pieces, cooked with
-                  traditional spices and herbs.
+                  Crispy chicken tenders stir fried with chowk's explosive dynamite sauce
                 </p>
                 <a href="#order" class="btn">Order Now</a>
               </div>
@@ -231,14 +226,13 @@
             <div class="box fade-in" data-category="drinks">
               <div class="category-badge drinks">Drinks</div>
               <img
-                src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?w=400&h=300&fit=crop"
-                alt="Iced Coffee"
+                src="/images/Masala Chai Tea.jpg"
+                alt="Masala Chai Tea"
               />
               <div class="content">
-                <h3>Iced Coffee</h3>
+                <h3>Masala Chai Tea</h3>
                 <p>
-                  Rich espresso served over ice with a touch of cream. Perfect
-                  afternoon pick-me-up.
+                  Masala Chai Tea is our specialty—spiced milk tea brewed with aromatic herbs and warming spices.
                 </p>
                 <a href="#order" class="btn">Order Now</a>
               </div>
@@ -552,7 +546,7 @@
           </div>
           <div class="box fade-in">
             <img src="/images/step-2.jpg" alt="Step 2" />
-            <h3>Free and Fast Delivery</h3>
+            <h3>Ubereats and doordash</h3>
           </div>
           <div class="box fade-in">
             <img src="/images/step-3.jpg" alt="Step 3" />
@@ -777,7 +771,7 @@
 
             <a
               class="social-btn"
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/karma_and_kocktails?igsh=MXhnaDc4dXc3NXdlcA=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Karma & Kocktails on Instagram"

@@ -390,3 +390,19 @@ if (typeof module !== 'undefined' && module.exports) {
   window.GalleryManager = GalleryManager;
   window.RestaurantWebsite = RestaurantWebsite;
 }
+
+// Modal popup logic for notice
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById('notice-modal');
+  var closeBtn = document.getElementById('close-modal-btn');
+  if (modal && closeBtn) {
+    modal.style.display = "flex";
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+    // Optional: close modal when clicking outside the modal content
+    modal.onclick = function (e) {
+      if (e.target === modal) modal.style.display = "none";
+    };
+  }
+});
