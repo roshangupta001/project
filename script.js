@@ -406,3 +406,63 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 });
+
+
+// Chat launcher opens in a small floating window at bottom right
+document.addEventListener("DOMContentLoaded", () => {
+  const chatBtn = document.getElementById("kk-chat-launcher");
+  let chatWidget = null;
+
+  if (chatBtn) {
+    chatBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // If widget already exists, toggle visibility
+      if (chatWidget) {
+        chatWidget.style.display = chatWidget.style.display === "none" ? "block" : "none";
+        return;
+      }
+
+      // Create the chat widget container
+      chatWidget = document.createElement("div");
+      chatWidget.style.position = "fixed";
+      chatWidget.style.bottom = "24px";
+      chatWidget.style.right = "24px";
+      chatWidget.style.width = "350px";
+      chatWidget.style.height = "500px";
+      chatWidget.style.background = "#fff";
+      chatWidget.style.border = "1.5px solid #ccc";
+      chatWidget.style.borderRadius = "16px";
+      chatWidget.style.boxShadow = "0 8px 32px rgba(0,0,0,0.18)";
+      chatWidget.style.zIndex = "9999";
+      chatWidget.style.overflow = "hidden";
+      chatWidget.style.display = "block";
+
+      // Add a close button
+      const closeBtn = document.createElement("button");
+      closeBtn.innerHTML = "&times;";
+      closeBtn.style.position = "absolute";
+      closeBtn.style.top = "8px";
+      closeBtn.style.right = "12px";
+      closeBtn.style.background = "transparent";
+      closeBtn.style.border = "none";
+      closeBtn.style.fontSize = "1.5rem";
+      closeBtn.style.cursor = "pointer";
+      closeBtn.style.color = "#ffffffff";
+      closeBtn.onclick = () => {
+        chatWidget.style.display = "none";
+      };
+      chatWidget.appendChild(closeBtn);
+
+      // Add your chat iframe (replace src with your chat URL)
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://rochak111-nepali-restaurant-chatbot-app-gcnrhn.streamlit.app/?embed=true"; // <-- Replace with your chat service URL
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      chatWidget.appendChild(iframe);
+
+      document.body.appendChild(chatWidget);
+    });
+  }
+});

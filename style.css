@@ -2592,8 +2592,8 @@ textarea {
 /* Enhanced Scroll Top Button */
 #scroll-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 5rem;
+    right: 1.15rem;
     width: 60px;
     height: 60px;
     background:
@@ -3308,4 +3308,40 @@ textarea {
     to {
         transform: translateY(-50%) rotate(360deg);
     }
+}
+
+
+/* === Chat launcher (pop‑out) === */
+.kk-chat-launcher{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10050;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 3px solid var(--temple-gold, #c8a44d);
+  background: linear-gradient(135deg, var(--temple-gold, #c8a44d), var(--brass-500, #c8a44d));
+  color: var(--wood-900, #2b1a12);
+  font-size: 1.4rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  text-decoration: none;
+  transition: transform .18s ease, filter .18s ease;
+}
+.kk-chat-launcher:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+.kk-chat-launcher:active{
+  transform: translateY(0);
+}
+@media (max-width: 600px){
+  .kk-chat-launcher{
+    right: 12px;
+    bottom: 12px;
+    width: 56px;
+    height: 56px;
+  }
 }
